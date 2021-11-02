@@ -1,6 +1,6 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import TodoList from './todo-list.js'; // eslint-disable-line no-unused-vars
-import InputItem from './input.js' // eslint-disable-line no-unused-vars
+import InputItem from './input.js'; // eslint-disable-line no-unused-vars
 
 class TodoContainer extends React.Component {
   constructor(props) {
@@ -21,14 +21,12 @@ class TodoContainer extends React.Component {
   }
 
   addItem(item) {
-    this.setState({ todos: [...this.state.todos, item] })
+    this.setState({ todos: [...this.state.todos, item] });
   }
 
   removeItem(id) {
     const tempArray = Array.from(this.state.todos);
-    const newArray = tempArray.filter((item, index) => {
-      return index !== id;
-    });
+    const newArray = tempArray.filter((item, index) => index !== id);
 
     this.setState({ todos: newArray });
   }
