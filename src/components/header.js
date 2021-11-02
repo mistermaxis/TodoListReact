@@ -6,6 +6,6 @@ function Header() {
       <h1 className="header-title">Todo List</h1>
     </header>
   );
-};
+}
 
 export default Header;
