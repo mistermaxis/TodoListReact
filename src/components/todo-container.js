@@ -6,11 +6,7 @@ class TodoContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos: [
-        { name: "Run", completed: false },
-        { name: "Jump", completed: true },
-        { name: "Walk", completed: false },
-      ],
+      todos: [],
     };
 
     this.checkboxHandler = this.checkboxHandler.bind(this);
