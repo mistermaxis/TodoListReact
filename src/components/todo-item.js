@@ -1,8 +1,8 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 
 const TodoItem = ({
-  checkboxHandler, removeItem, item, index
-  }) => {
+  checkboxHandler, removeItem, item, index,
+}) => {
   function handleClick() {
     removeItem(index);
   }
