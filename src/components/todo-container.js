@@ -1,6 +1,6 @@
-import React from 'react';
-import TodoList from './todo-list.js';
-import InputItem from './input.js'
+import React from 'react'; // eslint-disable-line no-unused-vars
+import TodoList from './todo-list.js'; // eslint-disable-line no-unused-vars
+import InputItem from './input.js' // eslint-disable-line no-unused-vars
 
 class TodoContainer extends React.Component {
   constructor(props) {

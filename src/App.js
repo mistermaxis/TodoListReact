@@ -1,6 +1,6 @@
-import React from 'react';
-import Header from './components/header.js';
-import TodoContainer from './components/todo-container.js';
+import React from 'react'; // eslint-disable-line no-unused-vars
+import Header from './components/header.js'; // eslint-disable-line no-unused-vars
+import TodoContainer from './components/todo-container.js'; // eslint-disable-line no-unused-vars
 import './App.css';
 
 function App() {

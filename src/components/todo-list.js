@@ -1,5 +1,5 @@
-import React from "react";
-import TodoItem from "./todo-item";
+import React from 'react'; // eslint-disable-line no-unused-vars
+import TodoItem from "./todo-item.js"; // eslint-disable-line no-unused-vars
 import './todo-list.css';
 
 const TodoList = (props) => {
