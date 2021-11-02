@@ -1,6 +1,10 @@
 import React from "react";
 
-const TodoItem = ({ checkboxHandler, item, index }) => {
+const TodoItem = ({ checkboxHandler, removeItem, item, index }) => {
+  function handleClick() {
+    removeItem(index);
+  }
+
   return (
     <li>
       <div>
@@ -9,7 +13,8 @@ const TodoItem = ({ checkboxHandler, item, index }) => {
           checked={item.completed}
           onChange={() => { checkboxHandler(index) }}
         />
-        <span>{item.name}</span>
+        <span>{item.completed ? <s>{item.name}</s> : item.name}</span>
+        <button type="button" onClick={ handleClick }>Delete</button>
       </div>
     </li>
   );

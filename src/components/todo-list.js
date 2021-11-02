@@ -8,6 +8,7 @@ const TodoList = (props) => {
         return (
           <TodoItem
             checkboxHandler={props.checkboxHandler}
+            removeItem={props.removeItem}
             key={index.toString()}
             item={item}
             index={index}

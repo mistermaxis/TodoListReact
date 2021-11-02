@@ -1,5 +1,6 @@
-import React from "react";
-import TodoList from "./todo-list";
+import React from 'react';
+import TodoList from './todo-list.js';
+import InputItem from './input.js'
 
 class TodoContainer extends React.Component {
   constructor(props) {
@@ -13,6 +14,8 @@ class TodoContainer extends React.Component {
     };
 
     this.checkboxHandler = this.checkboxHandler.bind(this);
+    this.addItem = this.addItem.bind(this);
+    this.removeItem = this.removeItem.bind(this);
   }
 
   checkboxHandler(id) {
@@ -21,12 +24,27 @@ class TodoContainer extends React.Component {
     this.setState({ todos: newArray });
   }
 
+  addItem(item) {
+    this.setState({ todos: [...this.state.todos, item] })
+  }
+
+  removeItem(id) {
+    const tempArray = Array.from(this.state.todos);
+    const newArray = tempArray.filter((item, index) => {
+      return index !== id;
+    });
+
+    this.setState({ todos: newArray });
+  }
+
   render() {
     return (
       <div className="todo-container">
+        <InputItem addItem={this.addItem} />
         <TodoList
           items={this.state.todos}
           checkboxHandler={this.checkboxHandler}
+          removeItem={this.removeItem}
         ></TodoList>
       </div>
     );
