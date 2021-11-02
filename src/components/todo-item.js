@@ -1,6 +1,8 @@
-import React from "react"; // eslint-disable-line no-unused-vars
+import React from 'react'; // eslint-disable-line no-unused-vars
 
-const TodoItem = ({ checkboxHandler, removeItem, item, index }) => {
+const TodoItem = ({
+  checkboxHandler, removeItem, item, index
+  }) => {
   function handleClick() {
     removeItem(index);
   }
@@ -11,10 +13,14 @@ const TodoItem = ({ checkboxHandler, removeItem, item, index }) => {
         <input
           type="checkbox"
           checked={item.completed}
-          onChange={() => { checkboxHandler(index) }}
+          onChange={() => {
+            checkboxHandler(index);
+          }}
         />
         <span>{item.completed ? <s>{item.name}</s> : item.name}</span>
-        <button type="button" onClick={ handleClick }>Delete</button>
+        <button type="button" onClick={handleClick}>
+          Delete
+        </button>
       </div>
     </li>
   );
