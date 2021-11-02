@@ -3,7 +3,6 @@ import TodoItem from './todo-item.js'; // eslint-disable-line no-unused-vars
 import './todo-list.css';
 
 const TodoList = (props) => {
-
   function outputItems(item, index) {
     return (
       <TodoItem
